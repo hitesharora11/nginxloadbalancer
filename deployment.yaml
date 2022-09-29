@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weba
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: weba
+    spec:
+      containers:
+      - name: weba
+        image: hitesharora1116/weba:v1
+        ports:
+        - containerPort: 80
+  selector:
+    matchLabels:
+      app: weba
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webb
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: webb
+    spec:
+      containers:
+      - name: webb
+        image: hitesharora1116/webb:v1
+        ports:
+        - containerPort: 80
+  selector:
+    matchLabels:
+      app: webb
