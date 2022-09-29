@@ -2,6 +2,7 @@ To Install Minikube:-
 https://minikube.sigs.k8s.io/docs/start/
 
 #Start the minikube
+
 minikube start 
 
 #install the ingress controller addons : Check all addons features by running : minikube addons list
